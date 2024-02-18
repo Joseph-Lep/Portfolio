@@ -1,9 +1,13 @@
 /* global */
-body {
+:root {
   box-sizing: border-box;
   padding: 0;
-  width: 50vw;
-  background-color: darkkhaki;
+  width: 60vw;
+  background-color: rgb(255, 250, 186);
+  letter-spacing: -1px;
+  font-family: "Times New Roman", Times, serif;
+  --red: rgb(200, 20, 20);
+  --black: rgb(25, 25, 25);
 }
 
 ul {
@@ -13,7 +17,7 @@ ul {
 
 a,
 a:visited {
-  color: red;
+  color: var(--red);
 }
 
 header {
@@ -29,24 +33,23 @@ header {
 .title {
   grid-area: 1 / 1 / 2 / 3;
   font-size: 35px;
-  font-weight: 300;
+  font-weight: 100;
   margin: 0;
-  padding: 1px;
 }
 .name {
   grid-area: 2 / 1 / 5 / 2;
   writing-mode: vertical-lr;
   font-size: 35px;
-  color: red;
+  color: var(--red);
   margin-left: 2px;
-  border-left: solid 10px red;
+  border-left: solid 8px var(--red);
   padding: 1px;
   margin: 0;
   height: 300px;
 }
 .real {
   grid-area: 5 / 1 / 8 / 4;
-  border-top: solid 5px red;
+  border-top: solid 2px var(--red);
 }
 
 header ul li a img {
@@ -55,22 +58,23 @@ header ul li a img {
 }
 
 .cvmini {
-  grid-area: 5 / 4 / 8 / 7;
+  grid-area: 5 / 4 / 6 / 5;
   text-align: start;
-  border-top: solid 5px red;
+  border-top: solid 2px var(--red);
   margin-left: -10px;
+  width: 25vw;
 }
 .whoami {
   grid-area: 2 / 3 / 3 / 6;
 }
 
 .whoami ul {
-  border-left: solid 5px red;
+  border-left: solid 2px var(--red);
 }
 
 .whoami ul li {
   margin: 10px;
-  color: red;
+  color: var(--black);
   width: 35vw;
 }
 
@@ -99,12 +103,12 @@ h2::first-letter,
 h3::first-letter {
   font-size: 150%;
   font-weight: 900;
-  color: white;
+  color: var(--black);
 }
 
 @media screen and (min-width: 900px) {
   header {
-    rotate: -20deg;
+    rotate: -25deg;
     margin-left: 8vw;
     width: 75vw;
     font-size: 120%;
